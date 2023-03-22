@@ -1,0 +1,27 @@
+.country-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.load-more {
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: rgb(249, 87, 114);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  margin: 16px auto;
+  display: block;
+}
+
+.load-more:hover {
+  background-color: rgb(253, 35, 71);
+}
+
+.searchbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

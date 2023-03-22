@@ -1,0 +1,63 @@
+.country-card {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  width: 300px;
+  margin: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.flag-container {
+  width: 90%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+.country-continent {
+  color: rgb(249, 87, 114);
+  font-style: bold;
+}
+
+.country-flag {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.country-info {
+  padding: 16px;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin: 8px 0;
+}
+
+p {
+  margin: 4px 0;
+}
+
+.map-button {
+  background-color: rgb(249, 87, 114);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-top: auto;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.map-button:hover {
+  background-color: rgb(250, 0, 42);
+}

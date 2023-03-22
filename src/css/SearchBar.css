@@ -1,0 +1,22 @@
+.search-bar {
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+.search-input:focus {
+  border-color: #007bff;
+}
+
+.search-button {
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
