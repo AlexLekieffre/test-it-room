@@ -1,49 +1,28 @@
-import React, { useState, useEffect } from "react";
-import { languageMap } from "../const/languageMap";
+import React, { useState } from "react";
+import "../css/SearchBar.css";
 
 const SearchBar = ({ onSearch }) => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
-
-  useEffect(() => {
-    const timerId = setTimeout(() => {
-      setDebouncedSearchTerm(searchTerm);
-    }, 500);
-
-    return () => {
-      clearTimeout(timerId);
-    };
-  }, [searchTerm]);
-
-  useEffect(() => {
-    const searchLanguage = () => {
-      const searchTermInEnglish =
-        languageMap[debouncedSearchTerm.toLowerCase()] ||
-        debouncedSearchTerm.toLowerCase();
-      onSearch(searchTermInEnglish);
-    };
-
-    if (debouncedSearchTerm) {
-      searchLanguage();
-    } else {
-      onSearch("");
-    }
-  }, [debouncedSearchTerm, onSearch]);
+  const [searchValue, setSearchValue] = useState("");
 
   const handleChange = (event) => {
-    setSearchTerm(event.target.value);
+    setSearchValue(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    onSearch(searchValue);
   };
 
   return (
-    <div className="">
+    <form className="searchbar" onSubmit={handleSubmit}>
       <input
-        className="search-bar"
         type="text"
-        placeholder="Rechercher une langue..."
-        value={searchTerm}
+        placeholder="Recherchez un pays par langue"
+        value={searchValue}
         onChange={handleChange}
       />
-    </div>
+      <button type="submit">Rechercher</button>
+    </form>
   );
 };
 
